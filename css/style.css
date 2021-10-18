@@ -1,0 +1,13 @@
+h1, .title {
+  font-family: 'Shrikhand', 'sans-serif';
+}
+
+.card-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */
