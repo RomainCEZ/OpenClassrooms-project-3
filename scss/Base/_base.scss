@@ -1,0 +1,40 @@
+*, *:hover, *:focus {
+    box-sizing: inherit;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Roboto, sans-serif;
+}
+
+h1, .title {
+    font-family: 'Shrikhand', 'sans-serif';
+}
+
+p, h1, h2 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $padding-side;
+}

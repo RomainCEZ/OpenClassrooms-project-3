@@ -1,0 +1,12 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+$background: #F2F2F2;
+
+$btn-gradient: linear-gradient($color-secondary, $color-primary);
+$btn-gradient-light: linear-gradient(lighten($color-secondary, 10%), lighten($color-primary, 10%));
+
+$padding-side: 0 25px 0 25px;
+
+$shadow: 0 3px 6px #999;

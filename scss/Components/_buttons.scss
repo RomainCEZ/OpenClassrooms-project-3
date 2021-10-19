@@ -1,0 +1,12 @@
+.btn {
+    height: 50px;
+    color: #FFF;
+    background: $btn-gradient;
+    border: none;
+    box-shadow: $shadow;
+    border-radius: 25px;
+    padding: 0 25px 0 25px;
+    &:hover {
+        background: $btn-gradient-light;
+    }
+}
