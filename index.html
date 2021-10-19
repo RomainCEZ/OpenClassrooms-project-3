@@ -22,16 +22,11 @@
     <main>
         <section>
             <div id="loc">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Paris, Belleville</p>
+                <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
             </div>
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#restaurants">
-                <form>
-                    <input type="button" value="Restaurants" />
-                </form>
-            </a>
+            <button class="btn">Explorez nos restaurants</button>
         </section>
 
         <section id="instructions">
@@ -57,64 +52,64 @@
 
         <section id="restaurants">
             <h2>Restaurants</h2>
-            <ul id="rest-box">
-                <li>
+            <ul class="rest__box">
+                <li class="rest-card">
                     <a href="la_palette_du_gout.html">
                         <article>
-                            <div class="card-img">
+                            <div class="rest-card__img">
                                 <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
                             </div>
-                            <div class="card-text">
+                            <div class="rest-card__text">
                                 <h2>La palette du goût</h2>
                                 <p>Ménilmontant</p>
                             </div>
                             <i class="far fa-heart"></i>
-                            <div class="card-new">Nouveau</div>
+                            <div class="rest-card__new">Nouveau</div>
                         </article>
                     </a>
                 </li>
-                <li>
+                <li class="rest-card">
                     <a href="la_note_enchantee.html">
                         <article>
-                            <div class="card-img">
+                            <div class="rest-card__img">
                                 <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" />
                             </div>
-                            <div class="card-text">
+                            <div class="rest-card__text">
                                 <h2>La note enchantée</h2>
                                 <p>Charonne</p>
                             </div>
                             <i class="far fa-heart"></i>
-                            <div class="card-new">Nouveau</div>
+                            <div class="rest-card__new">Nouveau</div>
                         </article>
                     </a>
                 </li>
-                <li>
+                <li class="rest-card">
                     <a href="a_la_francaise.html">
                         <article>
-                            <div class="card-img">
+                            <div class="rest-card__img">
                                 <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" />
                             </div>
-                            <div class="card-text">
+                            <div class="rest-card__text">
                                 <h2>À la française</h2>
                                 <p>Cité rouge</p>
                             </div>
                             <i class="far fa-heart"></i>
-                            <div class="card-new hidden">Nouveau</div>
+                            <div class="rest-card__new hidden">Nouveau</div>
                         </article>
                     </a>
                 </li>
-                <li>
+                <li class="rest-card">
                     <a href="le_delice_des_sens.html">
                         <article>
-                            <div class="card-img">
+                            <div class="rest-card__img">
                                 <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
                             </div>
-                            <div class="card-text">
+                            <div class="rest-card__text">
                                 <h2>Le délice des sens</h2>
                                 <p>Folie-Méricourt</p>
                             </div>
                             <i class="far fa-heart"></i>
-                            <div class="card-new hidden">Nouveau</div>
+                            <div class="rest-card__new hidden">Nouveau</div>
                         </article>
                     </a>
                 </li>
@@ -139,7 +134,7 @@
                 <a href="#">Mentions légales</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="mailto:">Contact</a>
             </li>
         </ul>
     </footer>
