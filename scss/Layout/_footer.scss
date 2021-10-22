@@ -1,20 +1,36 @@
 footer {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
     background-color: #333;
     color: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: $padding-side;
 
-    h2 {
-        font-weight: lighter;
-        font-size: 18px;
+    @media screen and (min-width: 768px) {
+        padding: $padding-side-tablet;
     }
-    i {
+
+    @media screen and (min-width: 992px) {
+        padding: $padding-side-desktop;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: lighter;
+        margin-top: 20px;
+    }
+
+    .fa {
         font-size: 13px;
         width: 25px;
     }
+
     li {
         font-weight: lighter;
         padding: 5px;
+
+        &:hover {
+            color: $color-secondary;
+            text-decoration: underline;
+        }
     }
 }
