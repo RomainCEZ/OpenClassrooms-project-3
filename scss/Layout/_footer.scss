@@ -1,0 +1,36 @@
+footer {
+    background-color: #333;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: $padding-side;
+
+    @media screen and (min-width: 768px) {
+        padding: $padding-side-tablet;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: $padding-side-desktop;
+    }
+
+    .shrikhand {
+        font-size: 18px;
+        font-weight: lighter;
+        margin-top: 20px;
+    }
+
+    .fas {
+        font-size: 13px;
+        width: 24px;
+    }
+
+    li {
+        font-weight: lighter;
+        padding: 5px;
+
+        &:hover {
+            color: $color-secondary;
+            text-decoration: underline;
+        }
+    }
+}

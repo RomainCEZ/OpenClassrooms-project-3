@@ -1,0 +1,80 @@
+.menu-card {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    height: 68px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px;
+        width: 90%;
+        transition: all 300ms ease-in-out;
+        
+        * {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(60px);
+        transform-origin: right;
+        transition: all 300ms ease-in-out;
+        height: 100%;
+        position: absolute;
+        right: 0;
+
+        p {
+            padding-right: 12px;
+        }
+    }
+
+    &__check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60px;
+        border-radius: 0 16px 16px 0;
+        background-color: $color-tertiary;
+        transform: translateX(100%);
+        transform-origin: right;
+        transition: all 300ms ease-in-out;
+    }
+
+    &:hover {
+
+        .menu-card {
+            &__text {
+                width: 70%;
+            }
+
+            &__price, &__check {
+                transform: translateX(0);
+            }
+        }
+
+        .fa-check-circle {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.fa-check-circle {
+    color: #fff;
+    transform: rotate(0);
+    transition: all 400ms ease-in-out;
+}

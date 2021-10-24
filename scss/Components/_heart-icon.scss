@@ -1,0 +1,23 @@
+.fa-heart {
+    background: $heart-gradient;
+    -webkit-background-clip: text; /** -webkit- included for easier testing, remove before prefixing **/
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+
+    &.fas {
+        opacity: 0;
+        transition: $transition-300ms;
+    
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.fa-stack.menu__heart {
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    margin-right: 12px;
+}
