@@ -36,6 +36,7 @@
 
 .function {
     margin: 52px 0 68px;
+    padding: $padding-side;
 
     @media screen and (min-width: 768px) {
         padding: $padding-side-tablet;
@@ -122,6 +123,7 @@
 section.rest {
     background-color: $background;
     height: 1180px;
+    padding: $padding-side;
 
     > h2 {
         align-self: flex-start;

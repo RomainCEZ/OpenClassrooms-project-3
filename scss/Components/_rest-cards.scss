@@ -37,30 +37,15 @@
         top: 15px;
         width: 90px;
     }
-}
 
-.fa-heart {
-    background: $heart-gradient;
-    -webkit-background-clip: text; /** -webkit- included for easier testing, remove before build **/
-    background-clip: text;
-    bottom: 30px;
-    color: transparent;
-    cursor: pointer;
-    display: block;
-    font-size: 23px;
-    position: absolute;
-    right: 20px;
-    
-    &.fas {
-        opacity: 0;
-        transition: $transition-300ms;
-        
-        &:hover {
-            opacity: 1;
-        }
+    &__heart.fa-stack {
+        bottom: 16px;
+        display: block;
+        font-size: 23px;
+        position: absolute;
+        right: 0;
     }
 }
-
 
 .hidden {
     display: none;
