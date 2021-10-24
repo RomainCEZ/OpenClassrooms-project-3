@@ -9,7 +9,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-h1, .title {
+.shrikhand {
   font-family: Shrikhand, sans-serif;
   font-weight: lighter;
 }
@@ -36,7 +36,6 @@ section {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
 }
 
 header {
@@ -77,14 +76,14 @@ footer {
     padding: 0 15%;
   }
 }
-footer .title {
+footer .shrikhand {
   font-size: 18px;
   font-weight: lighter;
   margin-top: 20px;
 }
-footer .fa {
+footer .fas {
   font-size: 13px;
-  width: 25px;
+  width: 24px;
 }
 footer li {
   font-weight: lighter;
@@ -131,6 +130,7 @@ footer li:hover {
 
 .function {
   margin: 52px 0 68px;
+  padding: 0 20px;
 }
 @media screen and (min-width: 768px) {
   .function {
@@ -212,6 +212,7 @@ footer li:hover {
 section.rest {
   background-color: #F6F6F6;
   height: 1180px;
+  padding: 0 20px;
 }
 section.rest > h2 {
   align-self: flex-start;
@@ -245,8 +246,36 @@ section.rest > h2 {
   }
 }
 
-img.heading {
-  margin-top: 65px;
+.banner {
+  margin-top: 64px;
+}
+
+.menu {
+  display: flex;
+  background-color: #F6F6F6;
+  margin-top: -56px;
+  padding-bottom: 40px;
+}
+.menu__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px 40px 0 0;
+  background-color: #F6F6F6;
+  padding: 32px 20px 0;
+  width: 100%;
+  font-size: 14px;
+  top: 300px;
+}
+.menu__underline {
+  display: inline-block;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+.menu__box {
+  padding: 0 20px;
+  width: 100%;
 }
 
 .btn {
@@ -257,7 +286,7 @@ img.heading {
   color: #FFF;
   height: 50px;
   padding: 0 25px;
-  transform: scale(1);
+  cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 .btn:hover {
@@ -304,19 +333,92 @@ img.heading {
   top: 15px;
   width: 90px;
 }
+.rest-card__heart.fa-stack {
+  bottom: 16px;
+  display: block;
+  font-size: 23px;
+  position: absolute;
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-card {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  height: 68px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu-card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+  width: 90%;
+  transition: all 300ms ease-in-out;
+}
+.menu-card__text * {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu-card__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(60px);
+  transform-origin: right;
+  transition: all 300ms ease-in-out;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.menu-card__price p {
+  padding-right: 12px;
+}
+.menu-card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  border-radius: 0 16px 16px 0;
+  background-color: #99E2D0;
+  transform: translateX(100%);
+  transform-origin: right;
+  transition: all 300ms ease-in-out;
+}
+.menu-card:hover .menu-card__text {
+  width: 70%;
+}
+.menu-card:hover .menu-card__price, .menu-card:hover .menu-card__check {
+  transform: translateX(0);
+}
+.menu-card:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+
+.fa-check-circle {
+  color: #fff;
+  transform: rotate(0);
+  transition: all 400ms ease-in-out;
+}
 
 .fa-heart {
   background: radial-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
-  /** -webkit- included for easier testing, remove before build **/
+  /** -webkit- included for easier testing, remove before prefixing **/
   background-clip: text;
-  bottom: 30px;
   color: transparent;
   cursor: pointer;
-  display: block;
-  font-size: 23px;
-  position: absolute;
-  right: 20px;
 }
 .fa-heart.fas {
   opacity: 0;
@@ -326,8 +428,11 @@ img.heading {
   opacity: 1;
 }
 
-.hidden {
-  display: none;
+.fa-stack.menu__heart {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  margin-right: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
