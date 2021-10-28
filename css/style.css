@@ -334,11 +334,14 @@ section.rest > h2 {
   width: 90px;
 }
 .rest-card__heart.fa-stack {
-  bottom: 16px;
+  bottom: 32px;
   display: block;
   font-size: 23px;
   position: absolute;
-  right: 0;
+  right: 16px;
+}
+.rest-card__heart.fa-stack.fas {
+  font-size: 25px;
 }
 
 .hidden {
@@ -408,31 +411,46 @@ section.rest > h2 {
 
 .fa-check-circle {
   color: #fff;
+  font-size: 20px;
   transform: rotate(0);
   transition: all 400ms ease-in-out;
 }
 
-.fa-heart {
-  background: radial-gradient(#FF79DA, #9356DC);
+.far.fa-heart {
+  background-size: auto 200%;
+  background-image: linear-gradient(to top, transparent 50%, black 50%);
   -webkit-background-clip: text;
-  /** -webkit- included for easier testing, remove before prefixing **/
   background-clip: text;
   color: transparent;
   cursor: pointer;
-}
-.fa-heart.fas {
-  opacity: 0;
   transition: all 300ms ease-in-out;
 }
-.fa-heart.fas:hover {
-  opacity: 1;
+.far.fa-heart:hover {
+  background-position: center 100%;
 }
 
-.fa-stack.menu__heart {
+.fas.fa-heart {
+  background-size: auto 200%;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC 50%, transparent 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.fa-stack.menu__heart, .fa-stack.rest-card__heart {
   height: 1em;
   width: 1em;
   line-height: 1em;
+}
+
+.menu__heart {
   margin-right: 12px;
+}
+
+.fa-stack:hover .fa-heart {
+  background-position: center 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
