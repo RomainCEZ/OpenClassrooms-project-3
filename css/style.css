@@ -30,6 +30,8 @@ a {
 
 img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 section {
@@ -129,8 +131,9 @@ footer li:hover {
 }
 
 .function {
-  margin: 52px 0 68px;
+  margin: 52px 0;
   padding: 0 20px;
+  counter-reset: number;
 }
 @media screen and (min-width: 768px) {
   .function {
@@ -149,8 +152,9 @@ footer li:hover {
 .function__box {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 272px;
   justify-content: space-between;
+  margin-top: 24px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -181,6 +185,7 @@ footer li:hover {
   }
 }
 .function__card:hover {
+  /* bigger card and shadow + change background and icon color */
   background-color: #f2eafb;
   box-shadow: 6px 6px 12px #d0d0d0;
   transform: scale(1.01);
@@ -188,7 +193,11 @@ footer li:hover {
 .function__card:hover .function__card__icon {
   color: #9356DC;
 }
-.function__card__num {
+.function__card::before {
+  /* display auto incremented numbers in front of each function__card */
+  counter-increment: number;
+  content: counter(number);
+  position: absolute;
   background-color: #9356DC;
   border-radius: 50%;
   color: #fff;
@@ -270,6 +279,7 @@ section.rest > h2 {
 .menu__underline {
   display: inline-block;
   border-bottom: 3px solid #99E2D0;
+  padding-bottom: 8px;
   margin-bottom: 16px;
   margin-top: 20px;
 }
@@ -277,15 +287,105 @@ section.rest > h2 {
   padding: 0 20px;
   width: 100%;
 }
+.menu__section {
+  padding-top: 24px;
+}
+.menu__section__title {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.menu__section__title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  bottom: -8px;
+  width: 2.5em;
+  background-color: #99E2D0;
+}
 
+.spinner::before {
+  content: "";
+  position: fixed;
+  font-size: 1.75em;
+  color: #9356DC;
+  z-index: 5;
+  margin-left: -0.75em;
+  margin-top: -0.75em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  box-shadow: 0 -3em #9356dc, 2.25em -2.25em rgba(147, 86, 220, 0.875), 3em 0 rgba(147, 86, 220, 0.75), 2.25em 2.25em rgba(147, 86, 220, 0.625), 0 3em rgba(147, 86, 220, 0.5), -2.25em 2.25em rgba(147, 86, 220, 0.375), -3em 0 rgba(147, 86, 220, 0.25);
+  opacity: 0;
+  animation: spinner 3s linear both;
+}
+
+.spinner::after {
+  content: "ohmyfood";
+  position: fixed;
+  z-index: 4;
+  color: #000;
+  font-family: shrikhand, sans-serif;
+  font-size: 60px;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: background 3s linear both;
+}
+
+@keyframes spinner {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: rotate(0);
+  }
+  35% {
+    transform: rotate(-1turn);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(-2turn);
+  }
+  90% {
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+  }
+  91% {
+    top: -50%;
+    left: 150%;
+    transform: rotate(-2.5turn);
+  }
+}
+@keyframes background {
+  0%, 65% {
+    opacity: 1;
+    left: 0;
+  }
+  90% {
+    opacity: 0;
+    left: 0;
+  }
+}
 .btn {
   background: linear-gradient(#FF79DA, #9356DC);
   border: 0;
   border-radius: 25px;
   box-shadow: 0 6px 12px #dddddd;
   color: #FFF;
+  font-size: 16px;
   height: 50px;
-  padding: 0 25px;
+  padding: 0 20px;
+  min-width: 184px;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -300,6 +400,7 @@ section.rest > h2 {
   box-shadow: 0 6px 12px #dddddd;
   height: 240px;
   position: relative;
+  width: 100%;
 }
 @media screen and (min-width: 992px) {
   .rest-card {
@@ -339,9 +440,6 @@ section.rest > h2 {
   font-size: 23px;
   position: absolute;
   right: 16px;
-}
-.rest-card__heart.fa-stack.fas {
-  font-size: 25px;
 }
 
 .hidden {

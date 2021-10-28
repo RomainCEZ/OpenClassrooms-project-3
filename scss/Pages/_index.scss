@@ -35,8 +35,9 @@
 }
 
 .function {
-    margin: 52px 0 68px;
+    margin: 52px 0;
     padding: $padding-side;
+    counter-reset: number;
 
     @media screen and (min-width: 768px) {
         padding: $padding-side-tablet;
@@ -54,8 +55,9 @@
     &__box {
         display: flex;
         flex-direction: column;
-        height: 300px;
+        height: 272px;
         justify-content: space-between;
+        margin-top: 24px;
         width: 100%;
     
         @media screen and (min-width: 768px) {
@@ -83,7 +85,7 @@
             width: 30%;
         }
     
-        &:hover {
+        &:hover { /* bigger card and shadow + change background and icon color */
             background-color: lighten($color-primary, 35%);
             box-shadow: $shadow-hover;
             transform: scale(1.01);
@@ -93,7 +95,10 @@
             }
         }
     
-        &__num {
+        &::before { /* display auto incremented numbers in front of each function__card */
+            counter-increment: number;
+            content: counter(number);
+            position: absolute;
             background-color: $color-primary;
             border-radius: 50%;
             color: #fff;
