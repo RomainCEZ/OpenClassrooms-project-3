@@ -18,9 +18,18 @@ p, h1, h2, h3 {
   margin: 0;
 }
 
+p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
 ul {
   list-style: none;
   padding: 0;
+}
+
+li {
+  width: fit-content;
 }
 
 a {
@@ -51,7 +60,6 @@ header {
   width: 100%;
   height: 64px;
   font-size: 15px;
-  box-shadow: 0 6px 12px #dddddd;
 }
 
 .fa-arrow-left {
@@ -67,21 +75,26 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
+  padding-top: 28px;
+  padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
   footer {
     padding: 0 4%;
+    padding-top: 28px;
+    padding-bottom: 16px;
   }
 }
 @media screen and (min-width: 992px) {
   footer {
     padding: 0 15%;
+    padding-top: 28px;
+    padding-bottom: 16px;
   }
 }
 footer .shrikhand {
   font-size: 18px;
   font-weight: lighter;
-  margin-top: 20px;
 }
 footer .fas {
   font-size: 13px;
@@ -89,23 +102,29 @@ footer .fas {
 }
 footer li {
   font-weight: lighter;
-  padding: 5px;
+  padding: 4px;
 }
 footer li:hover {
   color: #FF79DA;
   text-decoration: underline;
 }
 
+.header__shadow {
+  box-shadow: 0 2px 4px #c3c3c3;
+}
+
 .loc {
   align-items: center;
   background: #e9e9e9;
   display: flex;
-  font-weight: bold;
   height: 52px;
   justify-content: center;
   margin-top: 64px;
   width: 100%;
   z-index: -1;
+}
+.loc p {
+  font-weight: 500;
 }
 
 .fa-map-marker-alt {
@@ -155,6 +174,7 @@ footer li:hover {
   height: 272px;
   justify-content: space-between;
   margin-top: 24px;
+  max-width: 1440px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -167,9 +187,10 @@ footer li:hover {
   align-items: center;
   background-color: #F6F6F6;
   border-radius: 20px;
-  box-shadow: 0 6px 12px #dddddd;
+  box-shadow: 0 4px 12px #d0d0d0;
   display: flex;
   height: 76px;
+  padding-right: 8px;
   position: relative;
   transition: all 300ms ease-in-out;
   width: 100%;
@@ -187,7 +208,7 @@ footer li:hover {
 .function__card:hover {
   /* bigger card and shadow + change background and icon color */
   background-color: #f2eafb;
-  box-shadow: 6px 6px 12px #d0d0d0;
+  box-shadow: 0 6px 12px #c3c3c3;
   transform: scale(1.01);
 }
 .function__card:hover .function__card__icon {
@@ -220,7 +241,7 @@ footer li:hover {
 
 section.rest {
   background-color: #F6F6F6;
-  height: 1180px;
+  height: 1196px;
   padding: 0 20px;
 }
 section.rest > h2 {
@@ -229,12 +250,12 @@ section.rest > h2 {
 }
 @media screen and (min-width: 768px) {
   section.rest {
+    height: 700px;
     padding: 0 4%;
   }
 }
 @media screen and (min-width: 992px) {
   section.rest {
-    height: 700px;
     padding: 0 15%;
   }
 }
@@ -245,10 +266,11 @@ section.rest > h2 {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  margin-bottom: 52px;
+  margin-bottom: 64px;
   width: 100%;
+  max-width: 1440px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .rest__box {
     flex-direction: row;
     flex-wrap: wrap;
@@ -256,14 +278,21 @@ section.rest > h2 {
 }
 
 .banner {
-  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 64px auto 0 auto;
+  max-height: 400px;
+  max-width: 1440px;
 }
 
 .menu {
   display: flex;
   background-color: #F6F6F6;
-  margin-top: -56px;
-  padding-bottom: 40px;
+  margin: -36px auto 0 auto;
+  padding-bottom: 60px;
+  max-width: 1440px;
 }
 .menu__heading {
   display: flex;
@@ -271,29 +300,35 @@ section.rest > h2 {
   justify-content: space-between;
   border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
-  padding: 32px 20px 0;
+  padding: 36px 20px 0;
   width: 100%;
   font-size: 14px;
   top: 300px;
 }
-.menu__underline {
-  display: inline-block;
-  border-bottom: 3px solid #99E2D0;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-  margin-top: 20px;
+.menu__heading i {
+  font-size: 24px;
 }
 .menu__box {
+  display: flex;
+  flex-direction: column;
   padding: 0 20px;
   width: 100%;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 992px) {
+  .menu__box {
+    flex-direction: row;
+    gap: 32px;
+  }
 }
 .menu__section {
-  padding-top: 24px;
+  padding-top: 20px;
+  flex-grow: 1;
 }
 .menu__section__title {
   position: relative;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 24px;
 }
 .menu__section__title::after {
@@ -380,7 +415,7 @@ section.rest > h2 {
   background: linear-gradient(#FF79DA, #9356DC);
   border: 0;
   border-radius: 25px;
-  box-shadow: 0 6px 12px #dddddd;
+  box-shadow: 0 4px 12px #d0d0d0;
   color: #FFF;
   font-size: 16px;
   height: 50px;
@@ -391,18 +426,28 @@ section.rest > h2 {
 }
 .btn:hover {
   background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 6px 6px 12px #d0d0d0;
-  transform: scale(1.01);
+  box-shadow: 0 6px 12px #c3c3c3;
 }
 
 .rest-card {
   border-radius: 15px;
-  box-shadow: 0 6px 12px #dddddd;
-  height: 240px;
+  box-shadow: 0 4px 12px #d0d0d0;
+  height: 248px;
   position: relative;
   width: 100%;
+  margin-bottom: 18px;
+  transition: all 300ms ease-in-out;
+}
+.rest-card:hover {
+  box-shadow: 0 6px 12px #c3c3c3;
+  transform: scale(1.01);
 }
 @media screen and (min-width: 992px) {
+  .rest-card {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 768px) {
   .rest-card {
     width: 48%;
   }
@@ -418,10 +463,13 @@ section.rest > h2 {
 .rest-card__text {
   display: flex;
   flex-direction: column;
-  font-size: 17px;
-  height: 70px;
-  justify-content: center;
-  padding: 2px 12px;
+  height: 78px;
+  justify-content: space-between;
+  padding: 16px 12px;
+}
+.rest-card__text h3 {
+  font-size: 18px;
+  font-weight: 800;
 }
 .rest-card__new {
   align-items: center;
@@ -439,7 +487,7 @@ section.rest > h2 {
   display: block;
   font-size: 23px;
   position: absolute;
-  right: 16px;
+  right: 24px;
 }
 
 .hidden {
@@ -452,16 +500,17 @@ section.rest > h2 {
   justify-content: space-between;
   width: 100%;
   background-color: #fff;
-  height: 68px;
-  margin-bottom: 8px;
+  height: 70px;
+  margin-bottom: 12px;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 4px 12px #d0d0d0;
 }
 .menu-card__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding: 12px;
   width: 90%;
   transition: all 300ms ease-in-out;
@@ -470,6 +519,13 @@ section.rest > h2 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.menu-card__text h3 {
+  font-size: 18px;
+}
+.menu-card__text p {
+  font-size: 15px;
+  font-weight: 400;
 }
 .menu-card__price {
   display: flex;
@@ -483,7 +539,11 @@ section.rest > h2 {
   right: 0;
 }
 .menu-card__price p {
+  font-size: 14px;
+  font-weight: 700;
   padding-right: 12px;
+  padding-bottom: 12px;
+  align-self: flex-end;
 }
 .menu-card__check {
   display: flex;
