@@ -4,19 +4,24 @@ footer {
     display: flex;
     flex-direction: column;
     padding: $padding-side;
+    padding-top: 28px;
+    padding-bottom: 16px;
 
     @media screen and (min-width: 768px) {
         padding: $padding-side-tablet;
+        padding-top: 28px;
+        padding-bottom: 16px;
     }
 
     @media screen and (min-width: 992px) {
         padding: $padding-side-desktop;
+        padding-top: 28px;
+        padding-bottom: 16px;
     }
 
     .shrikhand {
         font-size: 18px;
         font-weight: lighter;
-        margin-top: 20px;
     }
 
     .fas {
@@ -26,7 +31,7 @@ footer {
 
     li {
         font-weight: lighter;
-        padding: 5px;
+        padding: 4px;
 
         &:hover {
             color: $color-secondary;
