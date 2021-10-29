@@ -10,7 +10,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shrikhand&display=swap"
+        rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/bc25b93e9b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,7 +24,9 @@
     </header>
 
     <main class="pages">
-        <img class="banner" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo" />
+        <div class="banner">
+            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo" />
+        </div>
 
         <section class="menu">
             <div class="menu__heading">
@@ -32,8 +37,8 @@
                 </span>
             </div>
             <ul class="menu__box">
-                <li>
-                    <h2><span class="menu__underline">ENT</span>RÉES</h2>
+                <li class="menu__section">
+                    <h2 class="menu__section__title">ENTRÉES</h2>
                     <ul>
                         <li class="menu-card">
                             <div class="menu-card__text">
@@ -73,8 +78,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <h2><span class="menu__underline">PLA</span>TS</h2>                    <ul>
+                <li class="menu__section">
+                    <h2 class="menu__section__title">PLATS</h2>                    
+                    <ul>
                         <li class="menu-card">
                             <div class="menu-card__text">
                                 <h3>Filet de boeuf aux herbes</h3>
@@ -113,8 +119,8 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <h2><span class="menu__underline">DES</span>SERTS</h2>
+                <li class="menu__section">
+                    <h2 class="menu__section__title">DESSERTS</h2>
                     <ul>
                         <li class="menu-card">
                             <div class="menu-card__text">
