@@ -4,8 +4,12 @@
     justify-content: center;
     overflow: hidden;
     margin: 64px auto 0 auto;
-    max-height: 400px;
+    height: 256px;
     max-width: 1440px;
+
+    @media screen and (min-width: 768px) {
+        height: 350px;
+    }
 }
 
 .menu {
