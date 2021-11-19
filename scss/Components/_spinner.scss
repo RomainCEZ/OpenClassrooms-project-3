@@ -1,9 +1,9 @@
 .spinner::before {
     content: "";
     position: fixed;
+    z-index: 2;
     font-size: 1.75em;
     color: $color-primary;
-    z-index: 5;
     margin-left: -.75em;
     margin-top: -.75em;
     width: 1.5em;
@@ -24,7 +24,7 @@
 .spinner::after {
     content: "ohmyfood";
     position: fixed;
-    z-index: 4;
+    z-index: 1;
     color: #000;
     font-family: shrikhand, sans-serif;
     font-size: 60px;
