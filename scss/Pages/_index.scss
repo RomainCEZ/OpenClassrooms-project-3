@@ -94,10 +94,9 @@
             width: 30%;
         }
     
-        &:hover { /* bigger card and shadow + change background and icon color */
+        &:hover { /* bigger shadow + change background and icon color */
             background-color: lighten($color-primary, 35%);
             box-shadow: $shadow-hover;
-            transform: scale(1.01);
     
             .function__card__icon {
                 color: $color-primary;
