@@ -4,8 +4,8 @@ $color-tertiary: #99E2D0;
 
 $background: #F6F6F6;
 
-$btn-gradient: linear-gradient($color-secondary, $color-primary);
-$btn-gradient-light: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+$btn-gradient: linear-gradient(.485turn, $color-secondary, $color-primary);
+$btn-gradient-light: linear-gradient(.485turn, lighten($color-secondary, 5%), lighten($color-primary, 5%));
 
 $heart-gradient: linear-gradient(to top, $color-secondary, $color-primary 50%, transparent 50%);
 
