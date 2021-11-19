@@ -3,6 +3,8 @@ footer {
     color: #FFF;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: $padding-side;
     padding-top: 28px;
     padding-bottom: 16px;
@@ -11,6 +13,7 @@ footer {
         padding: $padding-side-tablet;
         padding-top: 28px;
         padding-bottom: 16px;
+        
     }
 
     @media screen and (min-width: 992px) {
@@ -39,4 +42,5 @@ footer {
             text-decoration: underline;
         }
     }
+
 }

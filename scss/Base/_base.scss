@@ -44,4 +44,13 @@ section {
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
 }
