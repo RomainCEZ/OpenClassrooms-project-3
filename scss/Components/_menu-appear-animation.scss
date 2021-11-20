@@ -1,0 +1,31 @@
+@keyframes menu-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    20% {
+        transform: translateY(10%);  
+    }
+
+    50% {
+        transform: translateY(5%);
+    }
+
+}
+
+.menu-card--1 {
+    animation: menu-appear .4s linear both;
+}
+
+.menu-card--2 {
+    animation: menu-appear .4s .2s linear both;
+}
+
+.menu-card--3 {
+    animation: menu-appear .4s .4s linear both;
+}
+
+.menu-card--4 {
+    animation: menu-appear .4s .6s linear both;
+}

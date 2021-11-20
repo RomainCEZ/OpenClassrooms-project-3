@@ -4,16 +4,17 @@ $color-tertiary: #99E2D0;
 
 $background: #F6F6F6;
 
-$btn-gradient: linear-gradient($color-secondary, $color-primary);
-$btn-gradient-light: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+$btn-gradient: linear-gradient(.485turn, $color-secondary, $color-primary);
+$btn-gradient-light: linear-gradient(.485turn, lighten($color-secondary, 5%), lighten($color-primary, 5%));
 
-$heart-gradient: radial-gradient($color-secondary, $color-primary);
+$heart-gradient: linear-gradient(to top, $color-secondary, $color-primary 50%, transparent 50%);
 
 $padding-side: 0 20px;
 $padding-side-tablet: 0 4%;
 $padding-side-desktop: 0 15%;
 
-$shadow: 0 6px 12px darken($background, 10%);
-$shadow-hover: 6px 6px 12px darken($background, 15%);
+$shadow: 0 4px 12px darken($background, 15%);
+$shadow-hover: 0 6px 12px darken($background, 20%);
+$shadow-header: 0 2px 4px darken($background, 20%);
 
 $transition-300ms: all 300ms ease-in-out;

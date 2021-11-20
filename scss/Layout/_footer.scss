@@ -3,20 +3,28 @@ footer {
     color: #FFF;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: $padding-side;
+    padding-top: 28px;
+    padding-bottom: 16px;
 
     @media screen and (min-width: 768px) {
         padding: $padding-side-tablet;
+        padding-top: 28px;
+        padding-bottom: 16px;
+        
     }
 
     @media screen and (min-width: 992px) {
         padding: $padding-side-desktop;
+        padding-top: 28px;
+        padding-bottom: 16px;
     }
 
     .shrikhand {
         font-size: 18px;
         font-weight: lighter;
-        margin-top: 20px;
     }
 
     .fas {
@@ -26,11 +34,13 @@ footer {
 
     li {
         font-weight: lighter;
-        padding: 5px;
+        padding: 4px;
+        width: fit-content;
 
         &:hover {
             color: $color-secondary;
             text-decoration: underline;
         }
     }
+
 }

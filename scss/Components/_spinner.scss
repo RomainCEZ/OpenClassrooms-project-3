@@ -1,0 +1,83 @@
+.spinner::before {
+    content: "";
+    position: fixed;
+    z-index: 2;
+    font-size: 1.75em;
+    color: $color-primary;
+    margin-left: -.75em;
+    margin-top: -.75em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    box-shadow:
+        0 -3em rgba(147, 86, 220, 1),
+        2.25em -2.25em rgba(147, 86, 220, 0.875),
+        3em 0 rgba(147, 86, 220, 0.75),
+        2.25em 2.25em rgba(147, 86, 220, 0.625),
+        0 3em rgba(147, 86, 220, 0.5),
+        -2.25em 2.25em rgba(147, 86, 220, 0.375),
+        -3em 0 rgba(147, 86, 220, 0.25);
+    opacity: 0;
+    animation: spinner 3s linear both;
+  }
+
+.spinner::after {
+    content: "ohmyfood";
+    position: fixed;
+    z-index: 1;
+    color: #000;
+    font-family: shrikhand, sans-serif;
+    font-size: 60px;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: background 3s linear both;
+}
+
+@keyframes spinner {
+    0% {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        transform: rotate(0);
+    }
+
+    35% {
+        transform: rotate(-1turn);
+    }
+
+    70% {
+        opacity: 1;
+        transform: rotate(-2turn);
+    }
+
+    90% {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+    }
+
+    91% {
+        top: -50%;
+        left: 150%;
+        transform: rotate(-2.5turn);
+    }
+}
+
+@keyframes background {
+    0%, 65% {
+        opacity: 1;
+        left: 0;
+    }
+
+    90% {
+        opacity: 0;
+        left: 0;
+    }
+}
