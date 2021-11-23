@@ -1,11 +1,25 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    opacity: 0;
+    animation: background 3s linear both;
+}
+
 .spinner::before {
     content: "";
-    position: fixed;
     z-index: 2;
+    position: inherit;
     font-size: 1.75em;
     color: $color-primary;
-    margin-left: -.75em;
-    margin-top: -.75em;
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
@@ -23,52 +37,14 @@
 
 .spinner::after {
     content: "ohmyfood";
-    position: fixed;
-    z-index: 1;
+    z-index: 3;
     color: #000;
     font-family: shrikhand, sans-serif;
     font-size: 60px;
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 0;
-    animation: background 3s linear both;
+    animation: text 3s linear both;
 }
 
-@keyframes spinner {
-    0% {
-        top: 50%;
-        left: 50%;
-        opacity: 1;
-        transform: rotate(0);
-    }
-
-    35% {
-        transform: rotate(-1turn);
-    }
-
-    70% {
-        opacity: 1;
-        transform: rotate(-2turn);
-    }
-
-    90% {
-        top: 50%;
-        left: 50%;
-        opacity: 0;
-    }
-
-    91% {
-        top: -50%;
-        left: 150%;
-        transform: rotate(-2.5turn);
-    }
-}
 
 @keyframes background {
     0%, 65% {
@@ -79,5 +55,48 @@
     90% {
         opacity: 0;
         left: 0;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+
+    35% {
+        opacity: .7;
+        transform: rotate(-1turn);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70% {
+        
+        transform: rotate(-2turn);
+    }
+
+    91% {
+        transform: rotate(-2.5turn);
+    }
+}
+
+@keyframes text {
+    10% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: .7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
     }
 }
