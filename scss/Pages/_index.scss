@@ -25,6 +25,7 @@
     background-color: $background;
     height: 285px;
     text-align: center;
+    width: 100%;
 
     h2 {
         font-size: 24px;
@@ -45,6 +46,7 @@
     margin: 52px 0;
     padding: $padding-side;
     counter-reset: number;
+    width: 100%;
 
     @media screen and (min-width: 768px) {
         padding: $padding-side-tablet;
@@ -52,6 +54,10 @@
 
     @media screen and (min-width: 992px) {
         padding: $padding-side-desktop;
+    }
+
+    .section {
+        max-width: 1000px;
     }
 
     &__heading {
@@ -65,7 +71,7 @@
         height: 272px;
         justify-content: space-between;
         margin-top: 24px;
-        max-width: 1440px;
+        max-width: 1000px;
         width: 100%;
     
         @media screen and (min-width: 768px) {
@@ -136,6 +142,7 @@
 section.rest {
     background-color: $background;
     height: 1196px;
+    width: 100%;
     padding: $padding-side;
 
     > h2 {
@@ -151,6 +158,10 @@ section.rest {
     @media screen and (min-width: 992px) {
         padding: $padding-side-desktop;
     }
+
+    .section {
+        max-width: 1000px;
+    }
 }
 
 .rest__box {
@@ -161,10 +172,14 @@ section.rest {
     justify-content: space-between;
     margin-bottom: 64px;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1000px;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
         flex-wrap: wrap;
     }
+}
+
+.section.index {
+    max-width: 1000px;
 }

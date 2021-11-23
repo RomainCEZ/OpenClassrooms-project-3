@@ -9,6 +9,12 @@ html, body {
     scroll-behavior: smooth;
     cursor: default;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
 .shrikhand {
     font-family: Shrikhand, sans-serif;

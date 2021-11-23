@@ -10,6 +10,13 @@ html, body {
   cursor: default;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .shrikhand {
   font-family: Shrikhand, sans-serif;
   font-weight: lighter;
@@ -98,9 +105,12 @@ footer {
 }
 @media screen and (min-width: 992px) {
   footer {
-    padding: 0 15%;
+    padding: 0 auto;
     padding-top: 28px;
     padding-bottom: 16px;
+  }
+  footer .section {
+    padding-left: 20px;
   }
 }
 footer .shrikhand {
@@ -147,6 +157,7 @@ footer li:hover {
   background-color: #F6F6F6;
   height: 285px;
   text-align: center;
+  width: 100%;
 }
 #section1 h2 {
   font-size: 24px;
@@ -165,6 +176,7 @@ footer li:hover {
   margin: 52px 0;
   padding: 0 20px;
   counter-reset: number;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .function {
@@ -173,8 +185,11 @@ footer li:hover {
 }
 @media screen and (min-width: 992px) {
   .function {
-    padding: 0 15%;
+    padding: 0 auto;
   }
+}
+.function .section {
+  max-width: 1000px;
 }
 .function__heading {
   align-self: flex-start;
@@ -186,7 +201,7 @@ footer li:hover {
   height: 272px;
   justify-content: space-between;
   margin-top: 24px;
-  max-width: 1440px;
+  max-width: 1000px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -253,6 +268,7 @@ footer li:hover {
 section.rest {
   background-color: #F6F6F6;
   height: 1196px;
+  width: 100%;
   padding: 0 20px;
 }
 section.rest > h2 {
@@ -267,8 +283,11 @@ section.rest > h2 {
 }
 @media screen and (min-width: 992px) {
   section.rest {
-    padding: 0 15%;
+    padding: 0 auto;
   }
+}
+section.rest .section {
+  max-width: 1000px;
 }
 
 .rest__box {
@@ -279,13 +298,17 @@ section.rest > h2 {
   justify-content: space-between;
   margin-bottom: 64px;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1000px;
 }
 @media screen and (min-width: 768px) {
   .rest__box {
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+
+.section.index {
+  max-width: 1000px;
 }
 
 .banner {
@@ -296,6 +319,7 @@ section.rest > h2 {
   margin: 64px auto 0 auto;
   height: 256px;
   max-width: 1440px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .banner {
@@ -306,9 +330,11 @@ section.rest > h2 {
 .menu {
   display: flex;
   background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
   margin: -36px auto 0 auto;
   padding-bottom: 60px;
   max-width: 1440px;
+  width: 100%;
 }
 .menu__heading {
   display: flex;
