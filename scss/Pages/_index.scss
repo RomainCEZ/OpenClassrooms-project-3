@@ -140,6 +140,7 @@
 
 
 section.rest {
+    justify-content: center;
     background-color: $background;
     height: 1196px;
     width: 100%;
@@ -170,7 +171,6 @@ section.rest {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    margin-bottom: 64px;
     width: 100%;
     max-width: 1000px;
 

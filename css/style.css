@@ -51,7 +51,6 @@ section {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .section {
@@ -266,6 +265,7 @@ footer li:hover {
 }
 
 section.rest {
+  justify-content: center;
   background-color: #F6F6F6;
   height: 1196px;
   width: 100%;
@@ -296,7 +296,6 @@ section.rest .section {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  margin-bottom: 64px;
   width: 100%;
   max-width: 1000px;
 }
